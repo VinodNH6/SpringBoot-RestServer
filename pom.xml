@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.vin.sample</groupId>
+  <artifactId>SpringBoot-RestServer</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+    
+	<parent>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-parent</artifactId>
+	    <version>2.1.5.RELEASE</version>
+	</parent>
+	
+	<properties>
+		<main-class>demo.MainApplication</main-class>
+        <java.version>1.8</java.version>
+    </properties>
+    
+	<!-- Installs build-plugins like clean, install, package -->
+    <build>
+        <plugins>
+            <plugin>               
+                <groupId>org.apache.maven.plugins</groupId>
+         		<artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <!-- Installs dependancies modules for this project -->
+	<dependencies>
+	
+	    <!-- To write REST end points -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-web</artifactId>
+		    <version>2.2.2.RELEASE</version>
+		</dependency>
+		
+		<!-- To write unit test/integration test cases -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- To get server status/health/audit/jvm details -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        
+		<dependency>
+		    <groupId>com.googlecode.json-simple</groupId>
+		    <artifactId>json-simple</artifactId>
+		    <version>1.1</version>
+		</dependency>
+		
+		
+		 <!-- To see docs on REST endpoints -->
+      <dependency>
+         <groupId>io.springfox</groupId>
+         <artifactId>springfox-swagger2</artifactId>
+         <version>2.7.0</version>
+      </dependency>
+
+      <dependency>
+         <groupId>io.springfox</groupId>
+         <artifactId>springfox-swagger-ui</artifactId>
+         <version>2.7.0</version>
+      </dependency>
+		
+	</dependencies>
+  
+  
+</project>
